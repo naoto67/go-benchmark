@@ -172,7 +172,7 @@ func Benchmark_JpgToPng(b *testing.B) {
 	b.StopTimer()
 }
 
-func Benchmark_AesCbc(b *testing.B) {
+func Benchmark_AesCfb(b *testing.B) {
 	key := []byte("aaaabbbbaaaabbbbaaaabbbbaaaabbbb")
 	block, _ := aes.NewCipher(key)
 	plainText := []byte("aaaaaaaabbbbaaaa")
