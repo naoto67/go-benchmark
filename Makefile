@@ -1,2 +1,2 @@
 bench:
-	GO111MODULE=off go test -bench . -benchmem -benchtime 5s
+	go test -bench . -benchmem -benchtime 0.1s
