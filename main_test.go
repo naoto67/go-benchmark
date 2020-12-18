@@ -18,6 +18,7 @@ import (
 	"math/big"
 	MathRand "math/rand"
 	"os"
+	"sort"
 	"testing"
 	"time"
 
@@ -38,6 +39,8 @@ var (
 	m      = Model{Id: 1122334455, Name: "aaa", Flag: true, Now: time.Now(), Array: []int{1, 2, 3, 4, 5}}
 	ms     = make([]Model, 0, 1000)
 	msData []byte
+
+	arr = []int{5, 2, 6, 3, 1, 4, 7, 9, 8}
 )
 
 func init() {
@@ -59,6 +62,18 @@ func Benchmark_Fib(b *testing.B) {
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {
 			fib(20)
+		}
+	})
+	b.StopTimer()
+}
+
+func Benchmark_Sort(b *testing.B) {
+	b.ResetTimer()
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			var a []int
+			copy(a, arr)
+			sort.Ints(a)
 		}
 	})
 	b.StopTimer()
