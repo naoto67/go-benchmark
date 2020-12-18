@@ -163,7 +163,7 @@ func Benchmark_JpgToPng(b *testing.B) {
 	b.ResetTimer()
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {
-			file, err := os.Open("./dataset/data1.jpg")
+			file, _ := os.Open("./dataset/data1.jpg")
 			img, _, _ := image.Decode(file)
 			buf := new(bytes.Buffer)
 			png.Encode(buf, img)
