@@ -1,0 +1,77 @@
+sh-4.2$ GO111MODULE=off go test -bench . -benchmem -benchtime 5s
+goos: linux
+goarch: arm64
+Benchmark_JsonMarshal-2          1875897              3211 ns/op             512 B/op         10 allocs/op
+Benchmark_MD5-2                 70350260                84.9 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA1-2                100000000               58.6 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA256-2              100000000               58.0 ns/op             0 B/op          0 allocs/op
+PASS
+ok      _/home/ssm-user 27.102s
+
+sh-4.2$ GO111MODULE=off go test -bench . -benchmem -benchtime 5s
+goos: linux
+goarch: arm64
+Benchmark_JsonMarshal-2          1893408              3171 ns/op             512 B/op         10 allocs/op
+Benchmark_MD5-2                 70420094                85.0 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA1-2                100000000               58.5 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA256-2              100000000               58.0 ns/op             0 B/op          0 allocs/op
+PASS
+ok      _/home/ssm-user 27.050s
+
+sh-4.2$ GO111MODULE=off go test -bench . -benchmem -benchtime 5s
+goos: linux
+goarch: arm64
+Benchmark_JsonMarshal-2          1871636              3196 ns/op             512 B/op         10 allocs/op
+Benchmark_MD5-2                 70525928                84.9 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA1-2                100000000               58.4 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA256-2              100000000               57.9 ns/op             0 B/op          0 allocs/op
+PASS
+ok      _/home/ssm-user 27.053s
+
+sh-4.2$ GO111MODULE=off go test -bench . -benchmem -benchtime 10s
+goos: linux
+goarch: arm64
+Benchmark_JsonMarshal-2          3789787              3170 ns/op             512 B/op         10 allocs/op
+Benchmark_MD5-2                 141289238               85.0 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA1-2                204588244               58.5 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA256-2              207308652               57.8 ns/op             0 B/op          0 allocs/op
+PASS
+ok      _/home/ssm-user 71.540s
+
+sh-4.2$  GO111MODULE=off go test -bench . -benchmem -benchtime 5s
+goos: linux
+goarch: amd64
+Benchmark_JsonMarshal-2          1415940              4232 ns/op             512 B/op         10 allocs/op
+Benchmark_MD5-2                 76689694                77.8 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA1-2                41903134               143 ns/op               0 B/op          0 allocs/op
+Benchmark_SHA256-2              27527084               218 ns/op               0 B/op          0 allocs/op
+
+sh-4.2$  GO111MODULE=off go test -bench . -benchmem -benchtime 5s
+goos: linux
+goarch: amd64
+Benchmark_JsonMarshal-2          1418204              4240 ns/op             512 B/op         10 allocs/op
+Benchmark_MD5-2                 76693141                77.9 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA1-2                41779232               143 ns/op               0 B/op          0 allocs/op
+Benchmark_SHA256-2              27510139               218 ns/op               0 B/op          0 allocs/op
+PASS
+ok      _/home/ssm-user 28.667s
+
+sh-4.2$  GO111MODULE=off go test -bench . -benchmem -benchtime 5s
+goos: linux
+goarch: amd64
+Benchmark_JsonMarshal-2          1418112              4228 ns/op             512 B/op         10 allocs/op
+Benchmark_MD5-2                 76552552                77.7 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA1-2                41961988               143 ns/op               0 B/op          0 allocs/op
+Benchmark_SHA256-2              27513746               218 ns/op               0 B/op          0 allocs/op
+PASS
+ok      _/home/ssm-user 28.659s
+
+sh-4.2$  GO111MODULE=off go test -bench . -benchmem -benchtime 10s
+goos: linux
+goarch: amd64
+Benchmark_JsonMarshal-2          2841267              4219 ns/op             512 B/op         10 allocs/op
+Benchmark_MD5-2                 154398970               77.9 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA1-2                83994537               143 ns/op               0 B/op          0 allocs/op
+Benchmark_SHA256-2              55057506               218 ns/op               0 B/op          0 allocs/op
+PASS
+ok      _/home/ssm-user 60.490s
