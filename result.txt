@@ -1,77 +1,32 @@
-sh-4.2$ GO111MODULE=off go test -bench . -benchmem -benchtime 5s
-goos: linux
-goarch: arm64
-Benchmark_JsonMarshal-2          1875897              3211 ns/op             512 B/op         10 allocs/op
-Benchmark_MD5-2                 70350260                84.9 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA1-2                100000000               58.6 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA256-2              100000000               58.0 ns/op             0 B/op          0 allocs/op
-PASS
-ok      _/home/ssm-user 27.102s
-
-sh-4.2$ GO111MODULE=off go test -bench . -benchmem -benchtime 5s
-goos: linux
-goarch: arm64
-Benchmark_JsonMarshal-2          1893408              3171 ns/op             512 B/op         10 allocs/op
-Benchmark_MD5-2                 70420094                85.0 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA1-2                100000000               58.5 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA256-2              100000000               58.0 ns/op             0 B/op          0 allocs/op
-PASS
-ok      _/home/ssm-user 27.050s
-
-sh-4.2$ GO111MODULE=off go test -bench . -benchmem -benchtime 5s
-goos: linux
-goarch: arm64
-Benchmark_JsonMarshal-2          1871636              3196 ns/op             512 B/op         10 allocs/op
-Benchmark_MD5-2                 70525928                84.9 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA1-2                100000000               58.4 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA256-2              100000000               57.9 ns/op             0 B/op          0 allocs/op
-PASS
-ok      _/home/ssm-user 27.053s
-
-sh-4.2$ GO111MODULE=off go test -bench . -benchmem -benchtime 10s
-goos: linux
-goarch: arm64
-Benchmark_JsonMarshal-2          3789787              3170 ns/op             512 B/op         10 allocs/op
-Benchmark_MD5-2                 141289238               85.0 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA1-2                204588244               58.5 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA256-2              207308652               57.8 ns/op             0 B/op          0 allocs/op
-PASS
-ok      _/home/ssm-user 71.540s
-
-sh-4.2$  GO111MODULE=off go test -bench . -benchmem -benchtime 5s
-goos: linux
-goarch: amd64
-Benchmark_JsonMarshal-2          1415940              4232 ns/op             512 B/op         10 allocs/op
-Benchmark_MD5-2                 76689694                77.8 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA1-2                41903134               143 ns/op               0 B/op          0 allocs/op
-Benchmark_SHA256-2              27527084               218 ns/op               0 B/op          0 allocs/op
-
-sh-4.2$  GO111MODULE=off go test -bench . -benchmem -benchtime 5s
-goos: linux
-goarch: amd64
-Benchmark_JsonMarshal-2          1418204              4240 ns/op             512 B/op         10 allocs/op
-Benchmark_MD5-2                 76693141                77.9 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA1-2                41779232               143 ns/op               0 B/op          0 allocs/op
-Benchmark_SHA256-2              27510139               218 ns/op               0 B/op          0 allocs/op
-PASS
-ok      _/home/ssm-user 28.667s
-
-sh-4.2$  GO111MODULE=off go test -bench . -benchmem -benchtime 5s
-goos: linux
-goarch: amd64
-Benchmark_JsonMarshal-2          1418112              4228 ns/op             512 B/op         10 allocs/op
-Benchmark_MD5-2                 76552552                77.7 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA1-2                41961988               143 ns/op               0 B/op          0 allocs/op
-Benchmark_SHA256-2              27513746               218 ns/op               0 B/op          0 allocs/op
-PASS
-ok      _/home/ssm-user 28.659s
-
-sh-4.2$  GO111MODULE=off go test -bench . -benchmem -benchtime 10s
-goos: linux
-goarch: amd64
-Benchmark_JsonMarshal-2          2841267              4219 ns/op             512 B/op         10 allocs/op
-Benchmark_MD5-2                 154398970               77.9 ns/op             0 B/op          0 allocs/op
-Benchmark_SHA1-2                83994537               143 ns/op               0 B/op          0 allocs/op
-Benchmark_SHA256-2              55057506               218 ns/op               0 B/op          0 allocs/op
-PASS
-ok      _/home/ssm-user 60.490s
+ARM_Benchmark_Fib-2                                   186196             32147 ns/op               0 B/op          0 allocs/op
+amd_Benchmark_Fib-2                                   165471             36156 ns/op               0 B/op          0 allocs/op
+ARM_Benchmark_Sort-2                                696225603                8.62 ns/op            0 B/op          0 allocs/op
+amd_Benchmark_Sort-2                                592678881               11.1 ns/op             0 B/op          0 allocs/op
+ARM_Benchmark_JsonMarshalUnmarshalModel-2            1888664              3173 ns/op             512 B/op         10 allocs/op
+amd_Benchmark_JsonMarshalUnmarshalModel-2            1427184              4204 ns/op             512 B/op         10 allocs/op
+ARM_Benchmark_JsonMarshalUnmarshalModels-2              1975           3075159 ns/op          436254 B/op       9009 allocs/op
+amd_Benchmark_JsonMarshalUnmarshalModels-2              1489           4033268 ns/op          435599 B/op       9009 allocs/op
+ARM_Benchmark_MsgpackModel-2                         2672426              2240 ns/op             515 B/op         11 allocs/op
+amd_Benchmark_MsgpackModel-2                         2391276              2509 ns/op             515 B/op         11 allocs/op
+ARM_Benchmark_MsgpackModels-2                           2894           2041447 ns/op          467801 B/op       8017 allocs/op
+amd_Benchmark_MsgpackModels-2                           2659           2260654 ns/op          467704 B/op       8017 allocs/op
+ARM_Benchmark_Gzip-2                                   16754            349395 ns/op         1249792 B/op         28 allocs/op
+amd_Benchmark_Gzip-2                                   14220            421182 ns/op         1249792 B/op         28 allocs/op
+ARM_Benchmark_Lz4-2                                    92503             64583 ns/op          533683 B/op          7 allocs/op
+amd_Benchmark_Lz4-2                                    49401            122738 ns/op          537668 B/op          7 allocs/op
+ARM_Benchmark_JpgToPng-2                                  56         105415368 ns/op         4231466 B/op     301508 allocs/op
+amd_Benchmark_JpgToPng-2                                  50         118034841 ns/op         4231473 B/op     301508 allocs/op
+ARM_Benchmark_AesCbc-2                              19581481               306 ns/op             288 B/op          9 allocs/op
+amd_Benchmark_AesCbc-2                              17194239               349 ns/op             288 B/op          9 allocs/op
+ARM_Benchmark_CryptoRandInt10000-2                   6609512               907 ns/op              56 B/op          4 allocs/op
+amd_Benchmark_CryptoRandInt10000-2                   4491272              1331 ns/op              56 B/op          4 allocs/op
+ARM_Benchmark_MathRandInt10000-2                    92150822                62.2 ns/op             0 B/op          0 allocs/op
+amd_Benchmark_MathRandInt10000-2                    246611242               24.3 ns/op             0 B/op          0 allocs/op
+ARM_Benchmark_Base64Encoding-2                         29264            204675 ns/op          524288 B/op          4 allocs/op
+amd_Benchmark_Base64Encoding-2                         21686            277028 ns/op          524288 B/op          4 allocs/op
+ARM_Benchmark_MD5-2                                 70508899                84.9 ns/op             0 B/op          0 allocs/op
+amd_Benchmark_MD5-2                                 76523287                78.1 ns/op             0 B/op          0 allocs/op
+ARM_Benchmark_SHA1-2                                100000000               58.4 ns/op             0 B/op          0 allocs/op
+amd_Benchmark_SHA1-2                                42140640               142 ns/op               0 B/op          0 allocs/op
+ARM_Benchmark_SHA256-2                              100000000               58.3 ns/op             0 B/op          0 allocs/op
+amd_Benchmark_SHA256-2                              27359640               219 ns/op               0 B/op          0 allocs/op

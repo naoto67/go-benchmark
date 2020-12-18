@@ -1,0 +1,68 @@
+h-4.2$ go test -bench . -benchmem -benchtime 5s
+goos: linux
+goarch: arm64
+pkg: app
+Benchmark_Fib-2                                   186081             32181 ns/op               0 B/op          0 allocs/op
+Benchmark_Sort-2                               696287632              8.62 ns/op               0 B/op          0 allocs/op
+Benchmark_JsonMarshalUnmarshalModel-2            1897869              3186 ns/op             512 B/op         10 allocs/op
+Benchmark_JsonMarshalUnmarshalModels-2              1940           3087155 ns/op          436276 B/op       9009 allocs/op
+Benchmark_MsgpackModel-2                         2683318              2226 ns/op             515 B/op         11 allocs/op
+Benchmark_MsgpackModels-2                           2884           2037268 ns/op          467783 B/op       8017 allocs/op
+Benchmark_Gzip-2                                   18002            345729 ns/op         1249792 B/op         28 allocs/op
+Benchmark_Lz4-2                                    91675             65188 ns/op          533593 B/op          7 allocs/op
+Benchmark_JpgToPng-2                                  56         105218812 ns/op         4231466 B/op     301508 allocs/op
+Benchmark_AesCbc-2                              19555774               305 ns/op             288 B/op          9 allocs/op
+Benchmark_CryptoRandInt10000-2                   6598758               907 ns/op              56 B/op          4 allocs/op
+Benchmark_MathRandInt10000-2                    97513269              62.6 ns/op               0 B/op          0 allocs/op
+Benchmark_Base64Encoding-2                         29458            202948 ns/op          524288 B/op          4 allocs/op
+Benchmark_MD5-2                                 70452991              84.9 ns/op               0 B/op          0 allocs/op
+Benchmark_SHA1-2                                100000000             58.4 ns/op               0 B/op          0 allocs/op
+Benchmark_SHA256-2                              100000000             58.3 ns/op               0 B/op          0 allocs/op
+PASS
+ok      app     113.591s
+
+sh-4.2$ go test -bench . -benchmem -benchtime 5s
+goos: linux
+goarch: arm64
+pkg: app
+Benchmark_Fib-2                                   186079             32166 ns/op               0 B/op          0 allocs/op
+Benchmark_Sort-2                                699414152                8.60 ns/op            0 B/op          0 allocs/op
+Benchmark_JsonMarshalUnmarshalModel-2            1895848              3168 ns/op             512 B/op         10 allocs/op
+Benchmark_JsonMarshalUnmarshalModels-2              1927           3082098 ns/op          436484 B/op       9009 allocs/op
+Benchmark_MsgpackModel-2                         2675558              2239 ns/op             515 B/op         11 allocs/op
+Benchmark_MsgpackModels-2                           2943           2040369 ns/op          467732 B/op       8017 allocs/op
+Benchmark_Gzip-2                                   16989            351870 ns/op         1249792 B/op         28 allocs/op
+Benchmark_Lz4-2                                    91154             65652 ns/op          533684 B/op          7 allocs/op
+Benchmark_JpgToPng-2                                  56         105184397 ns/op         4231465 B/op     301508 allocs/op
+Benchmark_AesCbc-2                              19687887               305 ns/op             288 B/op          9 allocs/op
+Benchmark_CryptoRandInt10000-2                   6630817               907 ns/op              56 B/op          4 allocs/op
+Benchmark_MathRandInt10000-2                    54548853               112 ns/op               0 B/op          0 allocs/op
+Benchmark_Base64Encoding-2                         29251            204984 ns/op          524288 B/op          4 allocs/op
+Benchmark_MD5-2                                 70531386                84.9 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA1-2                                100000000               58.5 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA256-2                              100000000               58.2 ns/op             0 B/op          0 allocs/op
+PASS
+ok      app     113.811s
+
+sh-4.2$ go test -bench . -benchmem -benchtime 5s
+goos: linux
+goarch: arm64
+pkg: app
+Benchmark_Fib-2                                   186196             32147 ns/op               0 B/op          0 allocs/op
+Benchmark_Sort-2                                696225603                8.62 ns/op            0 B/op          0 allocs/op
+Benchmark_JsonMarshalUnmarshalModel-2            1888664              3173 ns/op             512 B/op         10 allocs/op
+Benchmark_JsonMarshalUnmarshalModels-2              1975           3075159 ns/op          436254 B/op       9009 allocs/op
+Benchmark_MsgpackModel-2                         2672426              2240 ns/op             515 B/op         11 allocs/op
+Benchmark_MsgpackModels-2                           2894           2041447 ns/op          467801 B/op       8017 allocs/op
+Benchmark_Gzip-2                                   16754            349395 ns/op         1249792 B/op         28 allocs/op
+Benchmark_Lz4-2                                    92503             64583 ns/op          533683 B/op          7 allocs/op
+Benchmark_JpgToPng-2                                  56         105415368 ns/op         4231466 B/op     301508 allocs/op
+Benchmark_AesCbc-2                              19581481               306 ns/op             288 B/op          9 allocs/op
+Benchmark_CryptoRandInt10000-2                   6609512               907 ns/op              56 B/op          4 allocs/op
+Benchmark_MathRandInt10000-2                    92150822                62.2 ns/op             0 B/op          0 allocs/op
+Benchmark_Base64Encoding-2                         29264            204675 ns/op          524288 B/op          4 allocs/op
+Benchmark_MD5-2                                 70508899                84.9 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA1-2                                100000000               58.4 ns/op             0 B/op          0 allocs/op
+Benchmark_SHA256-2                              100000000               58.3 ns/op             0 B/op          0 allocs/op
+PASS
+ok      app     113.260s
